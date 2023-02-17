@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import {  StyleSheet, Text,  View, Alert, } from 'react-native';
-import { Stack, Button, TextInput, IconButton} from "@react-native-material/core";
+import { Stack, Button, TextInput, IconButton, Flex} from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 export default function Loginscreen() {
   
@@ -16,7 +16,7 @@ export default function Loginscreen() {
         /> 
         <TextInput
             style={styles.pinput}
-            placeholder="Password : ****"
+            placeholder="Password  "
             secureTextEntry={hide}
         />
         {/* <Button title="show" onPress={
@@ -49,7 +49,7 @@ export default function Loginscreen() {
         <Button
           style={styles.newreg}
           color='Blue'
-          title="Don't have an account / Register here"
+          title="New User / Register here"
           variant="text"
           /> 
     </View>
@@ -58,9 +58,11 @@ export default function Loginscreen() {
     const styles = StyleSheet.create({
 
         nithin: {
+          width: '70%',
+          flex:0,
           alignItems: 'center',
           justifyContent: 'center',
-          top : 180,
+          top : 100,
           height: 500,
           margin: 50,
         },
@@ -90,14 +92,14 @@ export default function Loginscreen() {
         },
 
         loginbutton: {
-          alignItems: 'center',
-          // justifyContent: 'center',
-          // paddingVertical: 5,
-          width: 80,
-          // paddingHorizontal: 5,
-          // borderRadius: 4,
-          // elevation: 2,
-          backgroundColor: 'lightgreen',
+           alignItems: 'center',
+           justifyContent: 'center',
+           paddingVertical: 5,
+           width: 120,
+           paddingHorizontal: 5,
+           borderRadius: 4,
+           elevation: 2,
+           backgroundColor: 'lightgreen',
         
           // position:'relative',
           marginTop:70,
@@ -106,13 +108,13 @@ export default function Loginscreen() {
           width:500,
           height:10,
           alignItems: 'center',
-          marginTop:40,
+          marginTop:50,
         },
         eyeicon: {
           height:22,
           width:22,
-          top:188,
-          right:20,
+          top:180,
+          right:8,
           borderRightWidth:1,
           borderLeftWidth:1,
         } 
