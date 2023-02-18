@@ -1,15 +1,21 @@
 import React,{useState} from 'react';
-import { StatusBar } from 'expo-status-bar';
-import {  StyleSheet, Text,  View, Alert, } from 'react-native';
-import { Stack, Button, TextInput, IconButton, Flex} from "@react-native-material/core";
+import {  StyleSheet, View, ImageBackground} from 'react-native';
+import { Stack, Button, TextInput, IconButton,} from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 export default function Loginscreen() {
-  
+
   const [hide,setUhide]=useState(true);
 
 
-    return (    
+    return (  
+      //nithin is a container   
     <View style={styles.nithin}>
+        <ImageBackground
+            style={{flex:1 }}
+            source={{
+            uri:'https://raw.githubusercontent.com/AboutReact/sampleresource/master/crystal_background.jpg',
+            }}
+            />
         <TextInput
             style={styles.uinput}
             placeholder="Email : abc@gmail.com"
@@ -56,15 +62,14 @@ export default function Loginscreen() {
         );
     }
     const styles = StyleSheet.create({
-
+          image: {
+          height:'100%',
+          width:'100%',
+        },
         nithin: {
-          width: '70%',
-          flex:0,
+          flex:1,
           alignItems: 'center',
-          justifyContent: 'center',
-          top : 100,
-          height: 500,
-          margin: 50,
+          justifyContent: 'center',  
         },
 
         uinput: {
@@ -72,16 +77,18 @@ export default function Loginscreen() {
           justifyContent: 'center',
           height: 40,
           width: 300,
-          marginTop:0,
+          marginTop:860,
           padding:10,
         },
 
         pinput: {
-          
+          alignItems: 'center',
+          justifyContent: 'center',
           height: 40,
           width: 300,
-          marginTop: 25,
+          margin:50,
           padding:10,
+        
         },
 
         fpass:{
@@ -95,26 +102,25 @@ export default function Loginscreen() {
            alignItems: 'center',
            justifyContent: 'center',
            paddingVertical: 5,
-           width: 120,
+           width: 95,
            paddingHorizontal: 5,
            borderRadius: 4,
            elevation: 2,
-           backgroundColor: 'lightgreen',
-        
-          // position:'relative',
-          marginTop:70,
+           backgroundColor: '#5dadec',
+           position:'relative',
+           height:45,
         },
         newreg: {
           width:500,
           height:10,
           alignItems: 'center',
-          marginTop:50,
+          marginTop:55,
         },
         eyeicon: {
-          height:22,
-          width:22,
-          top:180,
-          right:8,
+          height:23,
+          width:23,
+          top:360,
+          right:68,
           borderRightWidth:1,
           borderLeftWidth:1,
         } 

@@ -12,12 +12,12 @@ import Loginscreen from './screens/loginscreen';
 export default function App(){
 
   return (
-  <View>
-    <Loginpage/>
-  </View>,
-  <View>
-      <Signuppage/>
-  </View>,
+  // <View>
+  //   <Loginpage/>
+  // </View>
+  // <View>
+  //     <Signuppage/>
+  // </View>
   <View>
     <Forgetpassscreen/>
   </View>

@@ -43,23 +43,22 @@ export default function Forgetpassscreen()
 }
 const styles = StyleSheet.create({
 nithin: {
-    width: '70%',
-    flex:0,
+    flex:1,
     alignItems: 'center',
     justifyContent: 'center',
-    top : 100,
-    height: 410,
-    margin: 50,
+    margin:50,
+  
   },
 
   uinput: {
     alignItems: 'center',
     justifyContent: 'center',
-    height: 40,
     width: 300,
-    marginVertical:10,
+    height:40,
+    marginTop:750,
     padding:10,
   },
+  
   npinput: {
     height: 40,
     width: 300,
@@ -76,17 +75,20 @@ nithin: {
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 5,
-    width: 120,
+    width: 95,
     paddingHorizontal: 5,
     borderRadius: 4,
     elevation: 2,
+    backgroundColor: '#5dadec',
+    position:'relative',
+    height:45,
     marginVertical:50,
-    backgroundColor: 'skyblue',
+    margin:40,
   },
   eyeicon: {
-    height:22,
-    width:22,
-    top:220,
+    height:23,
+    width:23,
+    top:380,
     right:20,
     borderRightWidth:1,
     borderLeftWidth:1,
