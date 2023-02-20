@@ -19,19 +19,21 @@ export default function Forgetpassscreen()
                 placeholder="Create New Password "
                 secureTextEntry={hide}
             />
-            <TextInput
-            style={styles.cpinput}
-            placeholder="Confirm Password "
-            secureTextEntry={hide}
-            />
-            <IconButton
-                icon={props => <Icon name="eye"/>} 
-                onPress={
-                    ()=>{setUhide(!hide)}
-                        }
-                style={styles.eyeicon}
-                position='absolute'
-            />
+              <View>
+                    <TextInput
+                    style={styles.cpinput}
+                    placeholder="Confirm Password "
+                    secureTextEntry={hide}
+                    />
+                    <IconButton
+                        icon={props => <Icon name="eye"/>} 
+                        onPress={
+                            ()=>{setUhide(!hide)}
+                                }
+                        style={styles.eyeicon}
+                        position='absolute'
+                    />
+             </View>
             <Button   
                 style={styles.loginbutton}
                 color='black' 
@@ -55,7 +57,7 @@ nithin: {
     justifyContent: 'center',
     width: 300,
     height:40,
-    marginTop:750,
+    marginTop:50,
     padding:10,
   },
   
@@ -75,7 +77,6 @@ nithin: {
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 5,
-    width: 95,
     paddingHorizontal: 5,
     borderRadius: 4,
     elevation: 2,
@@ -88,7 +89,7 @@ nithin: {
   eyeicon: {
     height:23,
     width:23,
-    top:380,
+    top:60,
     right:20,
     borderRightWidth:1,
     borderLeftWidth:1,

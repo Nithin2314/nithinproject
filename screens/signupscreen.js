@@ -3,7 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 import {  StyleSheet, Text,  View, Alert, } from 'react-native';
 import { Stack, Button, TextInput, IconButton} from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
-export default function Signupscreen() 
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+export default function Signupscreen({ navigation }) 
 {
   
   const [hide,setUhide]=useState(true);
@@ -31,21 +33,23 @@ export default function Signupscreen()
           function(){setUhide(!hide)}
           }/> */}
           {/* cpinput means confrim password */}
-          <TextInput
+         
+            <View style={styles.input_container}>
+            <TextInput
             style={styles.cpinput}
             placeholder="Confirm Password  "
             secureTextEntry={hide}
             />
-        <IconButton
-        
-            icon={props => <Icon name="eye"/>} 
-            onPress={
-                ()=>{setUhide(!hide)}
-                    }
-            style={styles.eyeicon}
-            position='absolute'
-          
-        />
+
+            <IconButton  
+                    icon={props => <Icon name="eye"/>} 
+                    onPress={
+                        ()=>{setUhide(!hide)}
+                            }
+                    style={styles.eyeicon}      
+            />
+            </View>
+       
         <Button   
             
             style={styles.signinbutton}
@@ -54,17 +58,12 @@ export default function Signupscreen()
             variant="outline"
             
         />
-        {/* <Button
-          style={styles.fpass}
-          color='Red'
-          title="Forget password ?"
-          variant="text"
-          />  */}
         {/* it will go to login page if */}
         <Button
           style={styles.newreg}
           color='Blue'
           title="You have an account / Login"
+          onPress={() => navigation.navigate('Login')}
           variant="text"
           /> 
     </View>
@@ -77,13 +76,16 @@ export default function Signupscreen()
           alignItems: 'center',
           justifyContent: 'center',
         },
+        input_container:{
+            position:'relative'
+        },
         ninput: {
            alignItems: 'center',
            justifyContent: 'center',
            height: 40,
            width: 300,
            margin:40,
-           marginTop:750,
+           marginTop:50,
           padding:10,
           },
         uinput: {
@@ -116,7 +118,7 @@ export default function Signupscreen()
           alignItems: 'center',
           justifyContent: 'center',
           paddingVertical: 5,
-          width: 95,
+          // width: 100,
           paddingHorizontal: 5,
           borderRadius: 4,
           elevation: 2,
@@ -125,7 +127,7 @@ export default function Signupscreen()
           height:45,
           marginBottom:50,
           marginTop:90,
-                },
+        },
         newreg: {
           width:500,
           height:10,
@@ -133,10 +135,11 @@ export default function Signupscreen()
           marginTop:0,
         },
         eyeicon: {
+         position:'absolute',
           height:23,
           width:23,
-          top:390,
-          right:68,
+          top:38,
+          right:30,
           borderRightWidth:1,
           borderLeftWidth:1,
         } 
