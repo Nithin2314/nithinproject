@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import {  StyleSheet, Text,  View, Alert,hide,setUhide } from 'react-native';
 import { Stack, Button, TextInput, IconButton, Flex} from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
-export default function Forgetpassscreen() 
+export default function Forgetpassscreen({ navigation }) 
 {
     const [hide,setUhide]=useState(true);
 
@@ -38,6 +38,7 @@ export default function Forgetpassscreen()
                 style={styles.loginbutton}
                 color='black' 
                 title="Submit"
+                onPress={() => navigation.navigate('Login')}
                 variant="outline"
             />
         </View>
@@ -76,13 +77,13 @@ nithin: {
   loginbutton: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 5,
-    paddingHorizontal: 5,
+    // paddingVertical: 5,
+    // paddingHorizontal: 5,
     borderRadius: 4,
     elevation: 2,
     backgroundColor: '#5dadec',
     position:'relative',
-    height:45,
+    // height:45,
     marginVertical:50,
     margin:40,
   },

@@ -1,7 +1,9 @@
 import React,{useState} from 'react';
-import {  StyleSheet, View, ImageBackground} from 'react-native';
-import { Stack, Button, TextInput, IconButton,} from "@react-native-material/core";
+import { StyleSheet, View, ImageBackground} from 'react-native';
+import { Button, TextInput, IconButton,} from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
+
+
 export default function Loginscreen({ navigation }) {
 
   const [hide,setUhide]=useState(true);
@@ -44,7 +46,7 @@ export default function Loginscreen({ navigation }) {
             <Button
               style={styles.fpass}
               color='Red'
-              title="Forget password ?"
+              title="Forgot password ?"
               onPress={() => navigation.navigate('Forgetscreen')}
               variant="text"
             /> 
@@ -84,7 +86,7 @@ export default function Loginscreen({ navigation }) {
         pinput: {
           alignItems: 'center',
           justifyContent: 'center',
-          height: 40,
+          height: 30,
           width: 300,
           margin:50,
           padding:10,
@@ -92,29 +94,30 @@ export default function Loginscreen({ navigation }) {
         },
 
         fpass:{
-          width:300,
+          width:200,
           height:10,
           alignItems: 'center',
-          marginTop:40,
+          right:70,
+          top:-75,
         },
 
         loginbutton: {
            alignItems: 'center',
            justifyContent: 'center',
-           paddingVertical: 5,
-           width: 95,
-           paddingHorizontal: 5,
-           borderRadius: 4,
-           elevation: 2,
+          //  paddingVertical: 5,
+          //  paddingHorizontal: 5,
+           borderRadius: 10,
+           elevation: 8,
            backgroundColor: '#5dadec',
            position:'relative',
-           height:45,
+          //  height:40,
+           top:40,
         },
         newreg: {
-          width:500,
-          height:10,
+          width:550,
+          // height:10,
           alignItems: 'center',
-          marginTop:55,
+          marginTop:70,
         },
         eyeicon: {
           height:23,
@@ -126,5 +129,4 @@ export default function Loginscreen({ navigation }) {
         } 
 
       });
-      
       
